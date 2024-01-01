@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+img {
+  width: 100%;
+}
+.container {
+  height: 100vh;
+  background-image: url("../img/404_2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(130, 127, 127, 0.2);
+  backdrop-filter: blur(50px);
+}
+.row {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.img-404 {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(50px);
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+.text-404 {
+  background-color: #fff;
+  color: #7c69c6;
+  margin-top: 3.5rem;
+  padding: 15px 50px;
+  font-size: 32px;
+  font-weight: bold;
+  border-radius: 20px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  cursor: pointer;
+}
+.img_animation {
+  position: absolute;
+  max-width: 170px;
+  animation: moving_images_animation 2s infinite alternate;
+  -webkit-animation: moving_images_animation 2s infinite alternate;
+}
+@keyframes moving_images_animation {
+  0% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+  }
+}
+.position1 {
+  right: 0;
+  top: 0;
+}
+.position2 {
+  right: 0;
+  bottom: 0;
+}
+.position3 {
+  bottom: 0;
+}
+.position4 {
+  top: 0;
+}
+@media screen and (max-width: 768px) {
+  .img_animation {
+    max-width: 100px;
+  }
+  .text-404 {
+   
+    margin-top: 1.5rem;
+    padding: 10px 30px;
+    font-size: 25px;
+    
+  }
+}
